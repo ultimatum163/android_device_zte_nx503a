@@ -89,6 +89,7 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
 # CM Hardware
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw/
+TARGET_TAP_TO_WAKE_NODE := "/data/tp/easy_wakeup_gesture"
 
 # Disable memcpy_base.S optimization
 TARGET_CPU_MEMCPY_BASE_OPT_DISABLE := true

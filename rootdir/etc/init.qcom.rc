@@ -1052,8 +1052,20 @@ on property:persist.service.btcmd=1
 on property:persist.service.btcmd=0
     stop  btCommand
 
-service zte_addr_config /system/bin/zte_addr_config
-	class main
+# ADDED BY ZTEMT ZhuBing
+# start gesture process
+service gesture /system/bin/tmg3993
+    class main
+# ADDED BY ZTEMT ZhuBing END
+    
+# ZTEMT add by luochangyang 2014.02.11
+#This is for TP node.
+service tp_node /system/bin/sh /system/bin/tp_node.sh
+    class main
+    user root
+    group root
+    oneshot
+# ZTEMT END
 
 #ZTEMT ADD by mayu 2013-9-14 for lcd image enhance
 on property:persist.sys.image.enhance=w
