@@ -361,10 +361,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.oem_socket=false
 
-# set USB OTG enabled to add support for USB storage type
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.isUsbOtgEnabled=1
-
 # Support for graceful UICC Vltg supply deact
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.qcril_uim_vcc_feature=1
