@@ -253,12 +253,19 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
+    hostapd.accept \
+    hostapd.deny \
+    hostapd_default.confg \
     hostapd \
     wpa_supplicant
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     ro.sys.umsdirtyratio=20
+
+#Additional Wifi
+PRODUCT_PACKAGES += \
+$(LOCAL_PATH)/etc/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
     
 # ANT+
 PRODUCT_PACKAGES += \
