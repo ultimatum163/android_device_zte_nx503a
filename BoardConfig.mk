@@ -195,3 +195,8 @@ WIFI_DRIVER_FW_PATH_P2P     := "/etc/firmware/bcm4339/fw_bcmdhd_p2p.bin"
 TARGET_USES_WCNSS_CTRL := true
 TARGET_USES_QCOM_WCNSS_QMI := true
 TARGET_PROVIDES_WCNSS_QMI := true
+
+# TWRP
+RECOVERY_VARIANT := twrp
+TW_THEME := portrait_hdpi
+PRODUCT_COPY_FILES += device/zte/nx503a/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
