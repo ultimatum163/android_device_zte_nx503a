@@ -331,14 +331,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/usr/idc/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc \
     $(LOCAL_PATH)/usr/idc/input_proxy.idc:system/usr/idc/input_proxy.idc \
-    $(LOCAL_PATH)/usr/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
     $(LOCAL_PATH)/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/usr/keylayout/cyttsp4_btn.kl:system/usr/keylayout/cyttsp4_btn.kl \
-    $(LOCAL_PATH)/usr/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
 
 # External key layouts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/usr/keylayout/Vendor_0a5c_Product_8502.kl:system/usr/keylayout/Vendor_0a5c_Product_8502.kl
+   $(LOCAL_PATH)/usr/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl
 
 #set_softkey
 PRODUCT_COPY_FILES += \
