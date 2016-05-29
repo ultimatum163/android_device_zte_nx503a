@@ -17,7 +17,8 @@
 package org.cyanogenmod.hardware;
 
 import org.cyanogenmod.hardware.util.FileUtils;
-import android.os.SystemProperties;
+
+import java.io.File;
 
 /*
  * Disable capacitive keys
@@ -30,10 +31,10 @@ import android.os.SystemProperties;
 
 public class KeyDisabler {
 
-    private static String CONTROL_PATH = "/sys/devices/gpio_keys.85/disabled_keys";
+    private static String CONTROL_PATH = "/data/tp/keypad_enable";
 
-    public static boolean isSupported() { 
-	return true; 
+    public static boolean isSupported() {
+        return new File(CONTROL_PATH).exists();
     }
 
     public static boolean isActive() {
@@ -41,7 +42,6 @@ public class KeyDisabler {
     }
 
     public static boolean setActive(boolean state) {
-	SystemProperties.set ( "softkey.change" ,  "1" );
         return FileUtils.writeLine(CONTROL_PATH, (state ? "0" : "1"));
     }
 

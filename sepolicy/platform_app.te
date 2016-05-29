@@ -1,0 +1,4 @@
+#============= platform_app ==============
+allow platform_app location_data_file:dir { write remove_name search add_name read open };
+allow platform_app location_data_file:sock_file { create unlink setattr getattr };
+allow platform_app self:netlink_kobject_uevent_socket { read bind create setopt };

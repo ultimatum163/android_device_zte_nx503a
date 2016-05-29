@@ -211,6 +211,12 @@ service usf-post-boot /system/bin/sh /system/etc/usf_post_boot.sh
 on property:init.svc.bootanim=stopped
     start usf-post-boot
 
+service tp_node /system/bin/sh /tp_node.sh
+     class main
+     user root
+     group root
+     oneshot
+
 service wcnss-service /system/bin/wcnss_service
     class late_start
     user system
