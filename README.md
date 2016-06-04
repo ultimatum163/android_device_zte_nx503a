@@ -19,9 +19,9 @@ or
 
 Edit  your `.repo/local_manifests/roomservice.xml`: adding this lines:
 ```xml
-  <project name="Maegorn/android_device_zte_nx503a" path="device/zte/nx503a" remote="github" revision="cm-13.0" />
-  <project name="Maegorn/android_kernel_zte_nx503a" path="kernel/zte/nx503a" remote="github" revision="cm-13.0" />
-  <project name="Maegorn/android_vendor_zte_nx503a" path="vendor/zte/nx503a" remote="github" revision="cm-13.0" />
+  <project name="Maegorn/android_device_zte_nx503a" path="device/zte/nx503a" remote="github" revision="mm-6.0" />
+  <project name="Maegorn/android_kernel_zte_nx503a" path="kernel/zte/nx503a" remote="github" revision="mm-6.0" />
+  <project name="Maegorn/android_vendor_zte_nx503a" path="vendor/zte/nx503a" remote="github" revision="mm-6.0" />
   ```
 
 ##Compile
