@@ -115,7 +115,7 @@ static void process_video_decode_hint(void *metadata)
     if (video_decode_metadata.state == 1) {
         if ((strncmp(governor, ONDEMAND_GOVERNOR, strlen(ONDEMAND_GOVERNOR)) == 0) &&
                 (strlen(governor) == strlen(ONDEMAND_GOVERNOR))) {
-            int resource_values[] = {THREAD_MIGRATION_SYNC_OFF};
+             int resource_values[] = {THREAD_MIGRATION_SYNC_OFF};
 
             perform_hint_action(video_decode_metadata.hint_id,
                     resource_values, sizeof(resource_values)/sizeof(resource_values[0]));
