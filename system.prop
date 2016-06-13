@@ -181,3 +181,7 @@ ro.gps.agps_provider=1
 
 # By default, primary storage is physical
 ro.vold.primary_physical=1
+
+#CNE
+# DPM
+persist.cne.feature=1

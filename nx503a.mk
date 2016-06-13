@@ -116,11 +116,15 @@ PRODUCT_PACKAGES += \
     libxml2 \
     camera.msm8974 \
     Snap
-    
+
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
+# For dwm module
+PRODUCT_PACKAGES += \
+    libnubia
+    
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
