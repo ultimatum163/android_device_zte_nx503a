@@ -209,3 +209,5 @@ TARGET_PROVIDES_WCNSS_QMI := true
 RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 PRODUCT_COPY_FILES += device/zte/nx503a/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
