@@ -63,6 +63,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# call dalvik heap config
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+
+# call hwui memory config
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
@@ -360,12 +366,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.yt=android-zte \
 
 # CDMA
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.force_eri_from_xml=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.ril.force_eri_from_xml=true
 
 # Disable QC Oem Hook
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.oem_socket=false
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.radio.oem_socket=false
 
 # Support for graceful UICC Vltg supply deact
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -373,7 +379,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.no_wait_for_card=1 \
-    persist.radio.apm_sim_not_pwdn=1
+    persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.add_power_save=1
 
+#Art
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapminfree=2m
+    dalvik.vm.dex2oat-swap=false

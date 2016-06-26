@@ -30,16 +30,11 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 TARGET_BOOTLOADER_NAME := nubia
 
 # Architecture
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := krait
-ARCH_ARM_HAVE_ARMV7A := true
-ARCH_ARM_HAVE_NEON := true
-ARCH_ARM_HAVE_TLS_REGISTER := true
-ARCH_ARM_HAVE_VFP := true
 
 # Assertions
 TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
@@ -60,6 +55,8 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
+
+USE_CLANG_PLATFORM_BUILD := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -95,9 +92,6 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 # CM Hardware
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw/
 TARGET_TAP_TO_WAKE_NODE := "/data/tp/easy_wakeup_gesture"
-
-# Disable memcpy_base.S optimization
-TARGET_CPU_MEMCPY_BASE_OPT_DISABLE := true
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
@@ -169,8 +163,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # RIL
 TARGET_RIL_VARIANT := caf
-COMMON_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
-COMMON_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
 
 # QCNE
 BOARD_USES_QCNE := true
@@ -187,7 +179,8 @@ BOARD_SEPOLICY_DIRS += \
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-BOARD_VOLD_MAX_PARTITIONS := 23
+BOARD_VOLD_MAX_PARTITIONS := 22
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # Wifi
 BOARD_NO_WIFI_HAL := true
