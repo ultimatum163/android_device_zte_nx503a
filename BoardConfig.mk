@@ -177,11 +177,6 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
         $(LOCAL_PATH)/sepolicy
 
-# Vold
-BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-BOARD_VOLD_MAX_PARTITIONS := 22
-COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
-
 # Wifi
 BOARD_NO_WIFI_HAL := true
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
