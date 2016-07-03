@@ -163,8 +163,8 @@ PRODUCT_PACKAGES += \
      Gello
  
 # LOWI
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/etc/lowi.conf:system/etc/lowi.conf
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/etc/lowi.conf:system/etc/lowi.conf
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -332,6 +332,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/usf_post_boot.sh:system/etc/usf_post_boot.sh \
     $(LOCAL_PATH)/etc/xtwifi.conf:system/etc/xtwifi.conf \
     $(LOCAL_PATH)/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
+
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8974
 
 # Key layouts and touchscreen
 PRODUCT_COPY_FILES += \
