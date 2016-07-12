@@ -29,6 +29,10 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 TARGET_BOOTLOADER_NAME := nubia
 
+#Power Hal
+TARGET_POWERHAL_VARIANT := qcom
+TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/zte/nx503a/etc/power_ext.c
+
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -132,9 +136,6 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 # binaries. Decrease the size if RAM or Flash Storage size is a limitation
 # of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_msm
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
