@@ -212,6 +212,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8974
 
+# IR packages
+PRODUCT_PACKAGES += \
+    consumerir.msm8974
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
