@@ -26,13 +26,13 @@
     <ctl name="LINEOUT4 Volume" value="13" />
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
-    <ctl name="RX1 Digital Volume" value="90" />
-    <ctl name="RX2 Digital Volume" value="90" />
+    <ctl name="RX1 Digital Volume" value="84" />
+    <ctl name="RX2 Digital Volume" value="84" />
     <ctl name="RX3 Digital Volume" value="84" />
     <ctl name="RX4 Digital Volume" value="84" />
     <ctl name="RX5 Digital Volume" value="84" />
     <ctl name="RX6 Digital Volume" value="84" />
-    <ctl name="RX7 Digital Volume" value="90" />
+    <ctl name="RX7 Digital Volume" value="84" />
     <ctl name="ADC1 Volume" value="19" />
     <ctl name="ADC2 Volume" value="19" />
     <ctl name="ADC3 Volume" value="0" />
@@ -805,6 +805,7 @@
         <ctl name="SLIM_0_TX Channels" value="One" />
         <ctl name="SLIM TX7 MUX" value="DEC6" />
         <ctl name="DEC6 MUX" value="ADC1" />
+        <ctl name="ADC1 Volume" value="32" />
         <ctl name="IIR1 INP1 MUX" value="DEC6" />
     </path>
 
@@ -837,6 +838,7 @@
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX7 MIX1 INP1" value="RX1" />
+        <ctl name="RX7 Digital Volume" value="88" />
     </path>
 
     <path name="speaker-fluid">
@@ -963,17 +965,17 @@
 
     <path name="headset-mic">
         <path name="adc2" />
-        <ctl name="ADC2 Volume" value="13" />
+        <ctl name="ADC2 Volume" value="32" />
     </path>
 
     <path name="headset-mic-DB">
         <path name="adc2" />
-        <ctl name="ADC2 Volume" value="14" />
+        <ctl name="ADC2 Volume" value="18" />
     </path>
 
     <path name="headset-mic-liquid">
         <path name="adc2" />
-        <ctl name="ADC2 Volume" value="20" />
+        <ctl name="ADC2 Volume" value="28" />
     </path>
 
     <path name="voice-handset">
@@ -998,7 +1000,7 @@
 
     <path name="voice-headset-mic">
         <path name="headset-mic" />
-        <ctl name="ADC2 Volume" value="13" />
+        <ctl name="ADC2 Volume" value="32" />
     </path>
 
     <path name="speaker-and-headphones">
