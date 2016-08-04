@@ -62,12 +62,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# call dalvik heap config
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
-
-# call hwui memory config
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
-
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
@@ -125,10 +119,6 @@ PRODUCT_PACKAGES += \
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
-
-# For dwm module
-PRODUCT_PACKAGES += \
-    libnubia
     
 # Charger
 PRODUCT_PACKAGES += \
@@ -210,6 +200,10 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     power.msm8974
+
+# LibPower
+PRODUCT_PACKAGES += \
+    power.qcom
 
 # IR packages
 PRODUCT_PACKAGES += \
@@ -362,8 +356,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.yt=android-zte \
 
 # CDMA
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    ro.ril.force_eri_from_xml=true
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.default_cdma_sub=0
 
 # Disable QC Oem Hook
 #PRODUCT_PROPERTY_OVERRIDES += \
