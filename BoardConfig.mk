@@ -61,6 +61,9 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
+# ANT+
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := NX503A,nx503a,Z5S,z5s,NX503AJ,nx503aj,Z5SN,z5sn
 
@@ -144,11 +147,11 @@ TARGET_PROVIDES_LIBLIGHT := true
 BOARD_USES_QCOM_HARDWARE := true
 USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
 
+BOARD_USES_SECURE_SERVICES := true
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 BOARD_VENDOR := zte-qcom
-
-BOARD_USES_SECURE_SERVICES := true
 
 # Recovery
 BOARD_SUPPRESS_EMMC_WIPE := true

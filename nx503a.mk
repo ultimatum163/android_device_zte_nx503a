@@ -52,7 +52,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:system/etc/permissions/android.hardware.sensor.stepdetector.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.software.print.xml:system/etc/permissions/android.software.print.xml \
-    frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml
+    frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
+    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # MIDI feature
 PRODUCT_COPY_FILES += \
@@ -187,6 +188,8 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
+    libOmxVdecHevc \
+    libmm-omxcore \
     libstagefrighthw
     
 # Compatibility with older blobs
@@ -265,6 +268,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #Additional Wifi
 PRODUCT_PACKAGES += \
 $(LOCAL_PATH)/etc/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
+
+# ANT+
+PRODUCT_PACKAGES += \
+    libantradio \
+    AntHalService \
+    com.dsi.ant.antradio_library \
+    antradio_app
 
 PRODUCT_PACKAGES += \
     giflib
@@ -360,8 +370,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_cdma_sub=0
 
 # Disable QC Oem Hook
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    persist.radio.oem_socket=false
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.oem_socket=false
 
 # Support for graceful UICC Vltg supply deact
 PRODUCT_PROPERTY_OVERRIDES += \
