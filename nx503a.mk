@@ -165,8 +165,8 @@ PRODUCT_PACKAGES += \
     keystore.msm8974
 
 # Lights
-PRODUCT_PACKAGES += \
-    lights.msm8974
+#PRODUCT_PACKAGES += \
+#    lights.msm8974
 
 # Media
 PRODUCT_COPY_FILES += \
