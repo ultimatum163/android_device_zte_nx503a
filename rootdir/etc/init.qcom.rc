@@ -273,11 +273,20 @@ on post-fs-data
     #Create a folder for SRS to be able to create a usercfg file
     mkdir /data/data/media 0770 media media
 
+    #button-backlight
+	chown root system /sys/class/leds/red/brightness
+	chmod 0666 /sys/class/leds/red/brightness
+	chown root system /sys/class/leds/red/max_brightness
+	chmod 0666 /sys/class/leds/red/max_brightness
+	chown root system /sys/class/leds/button-backlight/brightness
+	chmod 0666 /sys/class/leds/button-backlight/brightness
+	chown root system /sys/class/leds/button-backlight/max_brightness
+	chmod 0666 /sys/class/leds/button-backlight/max_brightness
 
-    chown system system /sys/class/leds/red/fade_parameter
-    chown system system /sys/class/leds/red/grade_parameter
-    chown system system /sys/class/leds/red/outn
-    chown system system /sys/class/leds/red/brightness
+	chown system system /sys/class/leds/red/fade_parameter
+	chown system system /sys/class/leds/red/grade_parameter
+	chown system system /sys/class/leds/red/outn
+	chown system system /sys/class/leds/red/brightness
 
 # ADDED BY ZTEMT ZhuBing
 # add the sensor sysfs permission
