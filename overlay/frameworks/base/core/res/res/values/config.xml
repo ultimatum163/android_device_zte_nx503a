@@ -306,7 +306,7 @@
          Empty is viewed as "all".  Only used on devices which
          don't support RIL_REQUEST_GET_RADIO_CAPABILITY
          format is UMTS|LTE|... -->
-   <string translatable="false" name="config_radio_access_family">GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|GSM|CDMA|WCDMA|TD_SCDMA</string>
+   <string translatable="false" name="config_radio_access_family">LTE|CDMA|EVDO|GSM|WCDMA|TD_SCDMA</string>
 
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
@@ -328,5 +328,8 @@
 
     <!-- enable doze powersaving mode -->
     <bool name="config_enableAutoPowerModes">true</bool>
+
+    <!-- Enable blur support -->
+    <bool name="config_ui_blur_enabled">true</bool>
 
 </resources>
