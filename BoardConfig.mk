@@ -200,14 +200,4 @@ WIFI_DRIVER_MODULE_ARG      := "nvram_path=/system/etc/firmware/bcm4339/nvram.tx
 #TARGET_USES_QCOM_WCNSS_QMI := true
 #TARGET_PROVIDES_WCNSS_QMI := true
 
-# TWRP
-RECOVERY_VARIANT := twrp
-TW_THEME := portrait_hdpi
-PRODUCT_COPY_FILES += device/zte/nx503a/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
-RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_REAL_SDCARD := true
-BOARD_SUPPRESS_SECURE_ERASE := true
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_FLASH_FROM_STORAGE := true
-TW_NO_SCREEN_TIMEOUT  := true
+
