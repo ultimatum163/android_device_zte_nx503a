@@ -85,6 +85,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/wifi/p2p_supplicant.conf:system/etc/wifi/p2p_supplicant.conf \
     $(LOCAL_PATH)/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
+include hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk
+
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
@@ -249,17 +251,21 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     libnetcmdiface \
-    crda \
-    regulatory.bin \
-    linville.key.pub.pem
-
-PRODUCT_PACKAGES += \
+    macloader \
     dhcpcd.conf \
     hostapd.accept \
     hostapd.deny \
     hostapd_default.confg \
+    libwpa_client \
     hostapd \
     wpa_supplicant
+
+# Wifi direct
+PRODUCT_PACKAGES += \
+    crda \
+    regdbdump \
+    regulatory.bin \
+    linville.key.pub.pem
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
@@ -326,8 +332,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/quipc.conf:system/etc/quipc.conf \
     $(LOCAL_PATH)/etc/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/etc/usf_post_boot.sh:system/etc/usf_post_boot.sh \
-    $(LOCAL_PATH)/etc/xtwifi.conf:system/etc/xtwifi.conf \
-    $(LOCAL_PATH)/etc/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
+    $(LOCAL_PATH)/configs/xtwifi.conf:system/etc/xtwifi.conf
 
 # GPS
 PRODUCT_PACKAGES += \
