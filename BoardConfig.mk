@@ -85,6 +85,7 @@ BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 # Charger
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
+BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # CM Hardware
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw/
