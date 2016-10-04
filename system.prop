@@ -1,6 +1,7 @@
 #
 # system.prop for msm8974
 #
+ro.vendor.extension_library=libqti-perfd-client.so
 
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
@@ -160,6 +161,7 @@ audio.offload.gapless.enabled=false
 persist.radio.rat_on=combine
 #Multi Mic test
 persist.factory.mic_number=13
+persist.radio.msgtunnel.start=false
 
 #Dolby DS1 DOLBY_UDC
 dmid=3067269873
@@ -174,3 +176,9 @@ ro.bt.bdaddr_path=/persist/.bt_nv.bin
 # GPS
 persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1
+
+# Storage
+ro.sys.sdcardfs=true
+
+# Wifi
+wifi.interface=wlan0
