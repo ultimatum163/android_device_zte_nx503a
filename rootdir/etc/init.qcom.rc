@@ -64,10 +64,13 @@ on fs
 
 on boot
     # bluetooth
+    setprop persist.service.btcmd "0"
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chown bluetooth bluetooth /proc/bluetooth/sleep/proto
+    chown bluetooth bluetooth /proc/bluetooth/sleep/lpm
+    chown bluetooth bluetooth /proc/bluetooth/sleep/btwrite
     chown bluetooth bluetooth /sys/module/hci_uart/parameters/ath_lpm
     chown bluetooth bluetooth /sys/module/hci_uart/parameters/ath_btwrite
     chown system system /sys/module/sco/parameters/disable_esco
@@ -76,10 +79,14 @@ on boot
     chmod 0660 /sys/module/hci_smd/parameters/hcismd_set
     chmod 0660 /sys/class/rfkill/rfkill0/state
     chmod 0660 /proc/bluetooth/sleep/proto
+    chmod 0660 /proc/bluetooth/sleep/lpm
+    chmod 0660 /proc/bluetooth/sleep/btwrite
     chown bluetooth bluetooth /dev/ttyHS0
+    chown bluetooth bluetooth /dev/ttyHS1
     chmod 0660 /sys/module/hci_uart/parameters/ath_lpm
     chmod 0660 /sys/module/hci_uart/parameters/ath_btwrite
     chmod 0660 /dev/ttyHS0
+    chmod 0660 /dev/ttyHS1
     chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
     chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
 
@@ -394,8 +401,30 @@ on post-fs-data
 
     on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-    # Temp hack to fix torch not being registered on boot
-    restart media
+
+    on property:bluetooth.isEnabled=true
+    start btwlancoex
+    write /sys/class/bluetooth/hci0/idle_timeout 7000
+
+    on property:bluetooth.sap.status=running
+    start bt-sap
+
+    on property:bluetooth.sap.status=stopped
+    stop bt-sap
+
+    on property:bluetooth.dun.status=running
+    start bt-dun
+
+    on property:bluetooth.dun.status=stopped
+    stop bt-dun
+
+    on property:ro.bluetooth.ftm_enabled=true
+    start ftmd
+    
+    on property:persist.service.ftmdaemon=1
+    start ftmd
+
+    
 
 # Services start here
 
@@ -556,6 +585,18 @@ service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
     group bluetooth net_bt_admin qcom_diag diag radio
     oneshot
 
+on property:bluetooth.start_hci=true
+    start start_hci_filter
+
+on property:bluetooth.start_hci=false
+    stop start_hci_filter
+
+service start_hci_filter /system/bin/wcnss_filter
+    class late_start
+    user bluetooth
+    group bluetooth
+    disabled
+
 service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
     user bluetooth
@@ -649,6 +690,8 @@ service rild1-wrapper /system/bin/sh /system/etc/init.qcom.ril.sh
     user root
     group root
     oneshot
+
+
 
 service tp_node /system/bin/sh /system/bin/tp_node.sh
     class main
