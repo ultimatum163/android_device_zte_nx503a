@@ -271,11 +271,7 @@ on post-fs-data
     # camera sockets
     mkdir /data/misc/camera 0770 camera camera
 
-    # Torch
-    chown system camera /sys/class/leds/torch-light/brightness
-    chmod 0660 /sys/class/leds/torch-light/brightness
-
-	#light
+    #light
     chown system system /sys/class/light/light/enable
     chown system system /sys/class/light/light/delay
 
