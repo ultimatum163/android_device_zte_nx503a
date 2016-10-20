@@ -1,6 +1,0 @@
-#!/system/bin/sh
-#
-# Fix thermal-engine start
-#
-
-thermal-engine
