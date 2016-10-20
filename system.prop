@@ -181,3 +181,7 @@ ro.sys.sdcardfs=true
 
 # Wifi
 wifi.interface=wlan0
+
+#for video recording, experimental and temporary
+media.stagefright.legacyencoder=true
+media.stagefright.codecremote=false
