@@ -254,6 +254,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf \
     $(LOCAL_PATH)/configs/thermal-engine-8974pro.conf:system/etc/thermal-engine-8974pro.conf
 
+#Thermal temporany fix
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal:system/etc/init.d/thermal
+
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
