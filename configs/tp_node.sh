@@ -1,4 +1,3 @@
-
 #! /bin/sh
 
 if [ ! -d "/data/tp" ]; then
