@@ -226,24 +226,13 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.class_main.sh \
-    init.mdm.sh \
     init.nubia.sh \
     init.nubia.usb.rc \
-    init.qcom.class_core.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.factory.sh \
     init.qcom.rc \
-    init.qcom.sh \
-    init.qcom.ssr.sh \
-    init.qcom.syspart_fixup.sh \
-    init.qcom.testscripts.sh \
-    init.qcom.uicc.sh \
-    init.qcom.usb.rc \
+    init.recovery.qcom.rc \
     init.qcom.usb.sh \
-    init.target.rc \
-    tp_node.sh \
-    ueventd.qcom.rc
+    ueventd.qcom.rc 
+
 
 # Telephony-ext
 PRODUCT_PACKAGES += telephony-ext
@@ -302,26 +291,12 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     mkntfs
 
-PRODUCT_PACKAGES += \
-    LatinIME \
-    libjni_latinime
-
 # etc
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/hcidump.sh:system/etc/hcidump.sh \
-    $(LOCAL_PATH)/configs/hsic.control.bt.sh:system/etc/hsic.control.bt.sh \
-    $(LOCAL_PATH)/configs/init.ath3k.bt.sh:system/etc/init.ath3k.bt.sh \
-    $(LOCAL_PATH)/configs/init.crda.sh:system/etc/init.crda.sh \
-    $(LOCAL_PATH)/configs/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
     $(LOCAL_PATH)/configs/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
-    $(LOCAL_PATH)/configs/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
-    $(LOCAL_PATH)/configs/init.qcom.efs.sync.sh:system/etc/init.qcom.efs.sync.sh \
     $(LOCAL_PATH)/configs/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
     $(LOCAL_PATH)/configs/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
-    $(LOCAL_PATH)/configs/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
-    $(LOCAL_PATH)/configs/init.qcom.sdio.sh:system/etc/init.qcom.sdio.sh \
     $(LOCAL_PATH)/configs/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh \
-    $(LOCAL_PATH)/configs/qca6234-service.sh:system/etc/qca6234-service.sh \
     $(LOCAL_PATH)/configs/usf_post_boot.sh:system/etc/usf_post_boot.sh
 
 # Key layouts and touchscreen
@@ -346,7 +321,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=/vendor/lib/libqc-opt.so \
+    ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so \
     persist.radio.apm_sim_not_pwdn=1 \
     ro.com.google.clientidbase=android-zte \
     ro.com.google.clientidbase.ms=android-zte \
