@@ -174,3 +174,6 @@ ro.bt.bdaddr_path=/persist/.bt_nv.bin
 # GPS
 persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1
+
+# Storage
+ro.sys.sdcardfs=true
