@@ -399,6 +399,16 @@ on post-fs-data
     # Prevents permission denied error for telephony
     chmod 0644 /proc/cmdline
 
+    # access permission for secure touch
+    chmod 0660 /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch_enable
+    chmod 0440 /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch
+    chown system drmrpc /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch_enable
+    chown system drmrpc /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch
+    chmod 0660 /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch_enable
+    chmod 0440 /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch
+    chown system drmrpc /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch_enable
+    chown system drmrpc /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch
+
     on property:wifi.change_nv_owner=1
     chown wifi wifi /persist/WCNSS_qcom_wlan_nv.bin
 
