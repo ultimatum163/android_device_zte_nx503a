@@ -162,6 +162,10 @@ PRODUCT_PACKAGES += \
     libnl_2 \
     libbson
 
+# Browser
+PRODUCT_PACKAGES += \
+    Gello
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8974
