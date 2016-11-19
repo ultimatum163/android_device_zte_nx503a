@@ -297,9 +297,7 @@ PRODUCT_PACKAGES += \
 
 # etc
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     $(LOCAL_PATH)/configs/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
-    $(LOCAL_PATH)/configs/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh \
     $(LOCAL_PATH)/configs/usf_post_boot.sh:system/etc/usf_post_boot.sh
 
 # Key layouts and touchscreen
