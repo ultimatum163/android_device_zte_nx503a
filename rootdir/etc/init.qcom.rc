@@ -516,11 +516,11 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     user camera
     group camera system inet input graphics
 
-service mpdecision /system/bin/mpdecision
+service mpdecision /system/bin/mpdecision --avg_comp
     class main
     user root
+    group root readproc
     disabled
-    socket perfd seqpacket 0666 root system
 
 service thermal-engine /system/vendor/bin/thermal-engine --config /system/etc/thermal-engine-8974pro.conf
    class main
