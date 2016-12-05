@@ -290,6 +290,8 @@ on post-fs-data
 	chown system system /sys/class/leds/red/outn
 	chown system system /sys/class/leds/red/brightness
 
+	write /sys/class/leds/button-backlight/max_brightness 20
+
 	#gesture
    	chown system system /sys/class/gesture/gesture/enable
    	chown system system /sys/class/gesture/gesture/gesture_offset_init
@@ -404,7 +406,7 @@ on post-fs-data
 
 # Services start here
 
-service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
+service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
     class late_start
     user root
     group root
