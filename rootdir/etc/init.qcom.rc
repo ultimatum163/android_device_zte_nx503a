@@ -290,7 +290,7 @@ on post-fs-data
 	chown system system /sys/class/leds/red/outn
 	chown system system /sys/class/leds/red/brightness
 
-	write /sys/class/leds/button-backlight/max_brightness 20
+	write /sys/class/leds/button-backlight/max_brightness 13
 
 	#gesture
    	chown system system /sys/class/gesture/gesture/enable
