@@ -375,6 +375,11 @@ on post-fs-data
     	chown system system /sys/class/sensor/temp_humidity/raw_humidity
     	chown system system /sys/class/sensor/temp_humidity/raw_temp
 
+	#vibration
+	chown system system /sys/class/timed_output/vibrator/enable
+	chown system system /sys/class/timed_output/vibrator/vtg_level
+	chmod 0664 /sys/class/timed_output/vibrator/vtg_level
+
 #ZTEMT enable detceting 9V charger 
     setprop persist.usb.hvdcp.detect false
 
