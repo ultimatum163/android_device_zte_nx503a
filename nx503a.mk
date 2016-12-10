@@ -78,6 +78,10 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Bluetooth Addr
+PRODUCT_PACKAGES += \
+    bdAddrLoader
+
 # WiFi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/nvram.txt:system/etc/firmware/bcm4339/nvram.txt \
@@ -149,6 +153,9 @@ PRODUCT_PACKAGES += \
     memtrack.msm8974 \
     liboverlay 
 
+# QCOM HAL
+$(call project-set-path,qcom-display,device/zte/nx503a/display)
+
 # DRM
 PRODUCT_PACKAGES += \
     libshim_wvm
@@ -165,6 +172,10 @@ PRODUCT_PACKAGES += \
 # Browser
 PRODUCT_PACKAGES += \
     Gello
+
+# Doze mode
+PRODUCT_PACKAGES += \
+    Nx503aDoze
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -316,6 +327,9 @@ PRODUCT_COPY_FILES += \
 # tp_node
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/tp_node.sh:system/bin/tp_node.sh
+
+# Misc
+PRODUCT_CHARACTERISTICS := nosdcard
 
 # Camera2 API
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

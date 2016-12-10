@@ -588,6 +588,12 @@ service tp_node /system/bin/sh /system/bin/tp_node.sh
     group root
     oneshot
 
+service bdAddrLoader /system/bin/bdAddrLoader -f /persist/bluetooth/.bdaddr -h -x
+    class main
+    user bluetooth
+    group system bluetooth
+    oneshot
+
 # ADDED BY ZTEMT ZhuBing
 # start gesture process
 service gesture /system/bin/tmg3993
