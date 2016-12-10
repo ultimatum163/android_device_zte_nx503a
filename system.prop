@@ -24,8 +24,8 @@ ro.telephony.default_network_1=1
 #added end
 debug.sf.hw=1
 debug.egl.hw=1
-debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
+persist.mdpcomp_perfhint=50
 debug.mdpcomp.logs=0
 # luochangyang 2014/03/12
 ro.sf.lcd_density=480
