@@ -166,6 +166,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Gello
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    Nx503aDoze
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8974
