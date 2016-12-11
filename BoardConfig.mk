@@ -59,6 +59,9 @@ TARGET_KERNEL_CONFIG := msm8974-NX503A_nomodules_defconfig
 TARGET_ZTEMT_DTS := true
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
+# Use Snapdragon LLVM, if available
+TARGET_USE_SDCLANG := true
+
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
@@ -145,9 +148,6 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 # Keylayout
 PRODUCT_COPY_FILES := $(filter-out frameworks/base/data/keyboards/Generic.kl:system/usr/keylayout/Generic.kl , $(PRODUCT_COPY_FILES))
-
-# Libc
-TARGET_NEEDS_GCC_LIBC := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
