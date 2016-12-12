@@ -57,7 +57,7 @@ TARGET_KERNEL_SOURCE := kernel/zte/nx503a
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := msm8974-NX503A_nomodules_defconfig
 TARGET_ZTEMT_DTS := true
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-cortex_a15-linux-gnueabihf-linaro_4.9/bin/arm-cortex_a15-linux-gnueabihf-
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
