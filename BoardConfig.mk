@@ -55,7 +55,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x01E00000 
 TARGET_KERNEL_SOURCE := kernel/zte/nx503a
 TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_CONFIG := msm8974-NX503A_nomodules_defconfig
+TARGET_KERNEL_CONFIG := lineageos_NX503A_defconfig
 TARGET_ZTEMT_DTS := true
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
