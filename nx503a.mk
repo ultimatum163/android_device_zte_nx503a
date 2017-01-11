@@ -135,7 +135,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libboringssl-compat \
     libshim_qc-opt \
-    libshim_rmt_storage
+    libshim_rmt_storage \
+    libstlport
 
 # Data
 PRODUCT_PACKAGES += \
@@ -326,7 +327,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so \
+    ro.vendor.extension_library=libqti-perfd-client.so \
     persist.radio.apm_sim_not_pwdn=1 \
     ro.com.google.clientidbase=android-zte \
     ro.com.google.clientidbase.ms=android-zte \

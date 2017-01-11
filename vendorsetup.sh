@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-add_lunch_combo cm_nx503a-user
-add_lunch_combo cm_nx503a-userdebug
-add_lunch_combo cm_nx503a-eng
+add_lunch_combo lineage_nx503a-user
+add_lunch_combo lineage_nx503a-userdebug
+add_lunch_combo lineage_nx503a-eng
