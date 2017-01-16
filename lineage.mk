@@ -29,7 +29,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := nx503a
-PRODUCT_NAME := cm_nx503a
+PRODUCT_NAME := lineage_nx503a
 PRODUCT_BRAND := nubia
 PRODUCT_MODEL := NX503A
 PRODUCT_MANUFACTURER := nubia

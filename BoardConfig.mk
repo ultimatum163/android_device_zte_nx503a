@@ -105,13 +105,13 @@ BOARD_HARDWARE_CLASS += \
 TARGET_CPU_MEMCPY_BASE_OPT_DISABLE := true
 
 # Enable dexpreopt to speed boot time
-ifeq ($(HOST_OS),linux)
-  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
-    ifeq ($(WITH_DEXPREOPT_BOOT_IMG_ONLY),)
-      WITH_DEXPREOPT_BOOT_IMG_ONLY := true
-    endif
-  endif
-endif
+#ifeq ($(HOST_OS),linux)
+#  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
+#    ifeq ($(WITH_DEXPREOPT_BOOT_IMG_ONLY),)
+#      WITH_DEXPREOPT_BOOT_IMG_ONLY := true
+#    endif
+#  endif
+#endif
 
 # Filesystem
 TARGET_USERIMAGES_USE_F2FS := true
@@ -175,9 +175,9 @@ TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # RIL
-TARGET_RIL_VARIANT := caf
-BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
-BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
+#TARGET_RIL_VARIANT := caf
+#BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
+#BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
 
 # RPC
 TARGET_NO_RPC := true

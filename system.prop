@@ -4,15 +4,15 @@
 
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
-persist.rild.nitz_plmn=
-persist.rild.nitz_long_ons_0=
-persist.rild.nitz_long_ons_1=
-persist.rild.nitz_long_ons_2=
-persist.rild.nitz_long_ons_3=
-persist.rild.nitz_short_ons_0=
-persist.rild.nitz_short_ons_1=
-persist.rild.nitz_short_ons_2=
-persist.rild.nitz_short_ons_3=
+#persist.rild.nitz_plmn=
+#persist.rild.nitz_long_ons_0=
+#persist.rild.nitz_long_ons_1=
+#persist.rild.nitz_long_ons_2=
+#persist.rild.nitz_long_ons_3=
+#persist.rild.nitz_short_ons_0=
+#persist.rild.nitz_short_ons_1=
+#persist.rild.nitz_short_ons_2=
+#persist.rild.nitz_short_ons_3=
 #added by wanghaiqing 2014/04/14
 
 #added end
@@ -20,8 +20,10 @@ ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 ro.telephony.default_network=22
 #added by wanghaiqing 2014/04/17  card2 defaultnetwork
-ro.telephony.default_network_1=1
+#ro.telephony.default_network_1=1
 #added end
+
+
 debug.sf.hw=1
 debug.egl.hw=1
 debug.composition.type=c2d
@@ -174,6 +176,3 @@ ro.bt.bdaddr_path=/persist/.bt_nv.bin
 # GPS
 persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1
-
-# Storage
-ro.sys.sdcardfs=true

@@ -242,11 +242,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     ueventd.qcom.rc 
 
-
-# Telephony-ext
-PRODUCT_PACKAGES += telephony-ext
-PRODUCT_BOOT_JARS += telephony-ext
-
 # Thermal config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermald-8974.conf:system/etc/thermald-8974.conf \
@@ -328,7 +323,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    persist.radio.apm_sim_not_pwdn=1 \
     ro.com.google.clientidbase=android-zte \
     ro.com.google.clientidbase.ms=android-zte \
     ro.com.google.clientidbase.am=android-zte \
@@ -355,7 +349,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.no_wait_for_card=1 \
     persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.add_power_save=1
+    persist.radio.add_power_save=1 \
+    persist.radio.msgtunnel.start=false \
+    persist.radio.oem_socket=false \
+    persist.env.spec=Default \
+    ro.telephony.call_ring.multiple=false \
+    ro.ril.force_eri_from_xml=true \
+    persist.data.qmi.adb_logmask=0
+
 
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=2m \
