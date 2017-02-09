@@ -1,3 +1,4 @@
+#============= untrusted_app ==============
 allow untrusted_app block_device:dir open;
 allow untrusted_app block_device:dir read;
 allow untrusted_app device:dir open;
@@ -11,3 +12,9 @@ allow untrusted_app sysfs:file open;
 allow untrusted_app tombstone_data_file:dir getattr;
 allow untrusted_app unlabeled:dir getattr;
 allow untrusted_app untrusted_app:udp_socket ioctl;
+allow untrusted_app app_data_file:file open;
+allow untrusted_app sysfs:dir { open read };
+allow untrusted_app sysfs:lnk_file getattr;
+allow untrusted_app debugfs:file { getattr };
+allow untrusted_app debuggerd_exec:file { open read };
+allow untrusted_app sysfs_usb_supply:dir { open read };
