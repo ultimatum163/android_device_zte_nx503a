@@ -134,8 +134,6 @@ PRODUCT_PACKAGES += \
 # Compatibility
 PRODUCT_PACKAGES += \
     libboringssl-compat \
-    libshim_qc-opt \
-    libshim_rmt_storage \
     libstlport
 
 # Data
@@ -350,11 +348,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.no_wait_for_card=1 \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.add_power_save=1 \
-    persist.radio.msgtunnel.start=false \
-    persist.radio.oem_socket=false \
     persist.env.spec=Default \
     ro.telephony.call_ring.multiple=false \
-    ro.ril.force_eri_from_xml=true \
     persist.data.qmi.adb_logmask=0
 
 
