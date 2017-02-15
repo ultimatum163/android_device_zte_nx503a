@@ -21,6 +21,9 @@ TARGET_BOOTANIMATION_HALF_RES := true
 # Disable block-based ota
 BLOCK_BASED_OTA := false
 
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # Inherit device configuration
 $(call inherit-product, device/zte/nx503a/nx503a.mk)
 
@@ -33,6 +36,8 @@ PRODUCT_NAME := lineage_nx503a
 PRODUCT_BRAND := nubia
 PRODUCT_MODEL := NX503A
 PRODUCT_MANUFACTURER := nubia
+
+PRODUCT_GMS_CLIENTID_BASE := android-zte
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=NX503A \
