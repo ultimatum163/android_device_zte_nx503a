@@ -196,10 +196,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     keystore.msm8974
 
-# Lights
-PRODUCT_PACKAGES += \
-    lights.msm8974
-
 # IR packages
 PRODUCT_PACKAGES += \
     consumerir.msm8974
