@@ -63,6 +63,9 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Bluetooth
+PRODUCT_PACKAGES += \
+    bdAddrLoader
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
@@ -151,6 +154,10 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     libshim_wvm
+
+# RIL
+PRODUCT_PACKAGES += \
+    libril_shim
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -320,7 +327,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so \
+    ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so \
     ro.com.google.clientidbase=android-zte \
     ro.com.google.clientidbase.ms=android-zte \
     ro.com.google.clientidbase.am=android-zte \

@@ -24,7 +24,7 @@ on early-init
 
 on init
     # BoringSSL hacks		
-     export LD_SHIM_LIBS /system/vendor/lib/libmmqjpeg_codec.so|libboringssl-compat.so:/system/vendor/lib/libwvm.so|libshim_wvm.so
+     export LD_SHIM_LIBS /system/vendor/lib/libmmqjpeg_codec.so|libboringssl-compat.so:/system/vendor/lib/libwvm.so|libshim_wvm.so:/system/lib/libril.so|libril_shim.so
  
      # Set permissions for persist partition
      mkdir /persist 0771 system system
@@ -455,6 +455,12 @@ on property:ro.data.large_tcp_window_size=true
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
+
+service bdAddrLoader /system/bin/bdAddrLoader -f /persist/bluetooth/.bdaddr -h -x
+    class main
+    user bluetooth
+    group system bluetooth
+    oneshot
 
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class main
