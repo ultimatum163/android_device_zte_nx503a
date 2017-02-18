@@ -1,0 +1,2 @@
+#============= location ==============
+allow location self:capability dac_override;

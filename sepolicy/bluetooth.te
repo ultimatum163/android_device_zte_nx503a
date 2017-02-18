@@ -1,2 +1,2 @@
 #============= bluetooth ==============
-allow bluetooth proc:file { open append };
+allow bluetooth proc_bluetooth_writable:file rw_file_perms;
