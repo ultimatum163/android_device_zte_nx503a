@@ -45,7 +45,6 @@ ro.qualcomm.cabl=0
 ro.sf.lcd_density=480
 
 #Camera
-camera2.portability.force_api=1
 persist.camera.tintless=enable
 persist.camera.4k2k.enable=1
 media.stagefright.legacyencoder=true 
