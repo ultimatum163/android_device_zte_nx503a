@@ -185,7 +185,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/gps/izat.conf:system/etc/izat.conf \
     $(LOCAL_PATH)/gps/quipc.conf:system/etc/quipc.conf \
-    $(LOCAL_PATH)/configs/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf 
 
 # IRSC
@@ -251,10 +250,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    libnetcmdiface \
-    macloader \
     hostapd \
-    hostapd_default.conf \
     libwpa_client \
     wpa_supplicant
 
@@ -264,21 +260,6 @@ PRODUCT_PACKAGES += \
     regdbdump \
     regulatory.bin \
     linville.key.pub.pem
-
-PRODUCT_PACKAGES += \
-    giflib
-
-PRODUCT_PACKAGES += \
-    WCNSS_cfg.dat \
-    WCNSS_qcom_cfg.ini \
-    libnetcmdiface \
-    libwcnss_qmi
-
-PRODUCT_PACKAGES += \
-    libcurl \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
-    wcnss_service
 
 PRODUCT_PACKAGES += \
     libion
