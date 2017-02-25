@@ -18,3 +18,6 @@ allow untrusted_app sysfs:lnk_file getattr;
 allow untrusted_app debugfs:file { getattr };
 allow untrusted_app debuggerd_exec:file { open read };
 allow untrusted_app sysfs_usb_supply:dir { open read };
+allow untrusted_app hvdcp_exec:file { execute execute_no_trans open read };
+allow untrusted_app sysfs_usb_supply:dir search;
+allow untrusted_app sysfs_usb_supply:file { getattr open read };
