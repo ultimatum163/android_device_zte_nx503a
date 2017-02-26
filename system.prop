@@ -61,6 +61,7 @@ ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
 bluetooth.chip.vendor=brcm
 bluetooth.hfp.client=1
 ro.bluetooth.alwaysbleon=true
+ro.bluetooth.ftm_enabled=true
 
 #Audio
 ro.qc.sdk.audio.ssr=false
