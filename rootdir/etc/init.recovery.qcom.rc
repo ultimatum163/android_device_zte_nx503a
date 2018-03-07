@@ -2,7 +2,6 @@ on early-init
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
     write /sys/block/mmcblk0/queue/scheduler "noop"
     write /sys/block/mmcblk0/bdi/read_ahead_kb 2048
-    write /sys/class/mmc_host/mmc0/clk_scaling/scale_down_in_low_wr_load 1
 
 on enable-low-power
     write /sys/module/lpm_levels/enable_low_power/l2 4
@@ -108,13 +107,16 @@ on property:recovery.perf.mode=0
 
 on property:ro.twrp.boot=1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
-    # Disable double tap to wake in twrp recovery
+    
+	# Disable double tap to wake in twrp recovery
     write /sys/bus/ttsp4/devices/main_ttsp_core.cyttsp4_i2c_adapter/easy_wakeup_gesture 0
     write /sys/bus/i2c/devices/2-005d/wakeup_gesture 0
-    # Disable our capacitive buttons
+    
+	# Disable our capacitive buttons
     write /sys/bus/ttsp4/drivers/cyttsp4_btn/cyttsp4_btn.main_ttsp_core/button 0
     write /sys/bus/i2c/devices/2-0022/input/input0/0dbutton 0
-    #Turn buttons backlight off in recovery
+    
+	#Turn buttons backlight off in recovery
     write /sys/class/leds/button-backlight/brightness 0
 
 on property:dev.bootcomplete=1

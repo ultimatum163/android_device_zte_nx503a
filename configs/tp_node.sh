@@ -38,7 +38,7 @@ fi
 
 if [ -e "/sys/bus/i2c/devices/2-005d/wakeup_gesture" ]; then
 	chown system:system /sys/bus/i2c/devices/2-005d/wakeup_gesture
-	ln -s /sys/bus/i2c/devices/2-005d/wakeup_gesture /data/tp/easy_wakeup_gesture
+	ln -s /sys/bus/i2c/devices/2-005d/wakeup_gesture /data/configs/easy_wakeup_gesture
 fi
 
 if [ -e "/sys/gtp_test/opentest" ]; then
@@ -66,7 +66,7 @@ fi
 
 if [ -e "/sys/bus/ttsp4/devices/main_ttsp_core.cyttsp4_i2c_adapter/easy_wakeup_gesture" ]; then
 	chown system:system /sys/bus/ttsp4/devices/main_ttsp_core.cyttsp4_i2c_adapter/easy_wakeup_gesture
-	ln -s /sys/bus/ttsp4/devices/main_ttsp_core.cyttsp4_i2c_adapter/easy_wakeup_gesture /data/tp/easy_wakeup_gesture
+	ln -s /sys/bus/ttsp4/devices/main_ttsp_core.cyttsp4_i2c_adapter/easy_wakeup_gesture /data/configs/easy_wakeup_gesture
 fi
 
 # ==============================================================================
@@ -82,7 +82,7 @@ fi
 
 if [ -e "/sys/class/input/input0/wakeup_gesture" ]; then
 	chown system:system /sys/class/input/input0/wakeup_gesture
-	ln -s /sys/class/input/input0/wakeup_gesture /data/tp/easy_wakeup_gesture
+	ln -s /sys/class/input/input0/wakeup_gesture /data/configs/easy_wakeup_gesture
 fi
 
 if [ -e "/sys/class/input/input0/f54/factory_result" ]; then
@@ -114,7 +114,7 @@ fi
 
 if [ -e "/sys/bus/ttsp5/devices/main_ttsp_core.cyttsp5_i2c_adapter/easy_wakeup_gesture" ]; then
 	chown system:system /sys/bus/ttsp5/devices/main_ttsp_core.cyttsp5_i2c_adapter/easy_wakeup_gesture
-	ln -s /sys/bus/ttsp5/devices/main_ttsp_core.cyttsp5_i2c_adapter/easy_wakeup_gesture /data/tp/easy_wakeup_gesture
+	ln -s /sys/bus/ttsp5/devices/main_ttsp_core.cyttsp5_i2c_adapter/easy_wakeup_gesture /data/configs/easy_wakeup_gesture
 fi
 
 if [ -e "/sys/bus/ttsp5/devices/main_ttsp_core.cyttsp5_i2c_adapter/touch_mode" ]; then

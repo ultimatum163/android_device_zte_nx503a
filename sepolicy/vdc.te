@@ -1,2 +1,0 @@
-#============= vdc ==============
-allow vdc self:capability dac_override;

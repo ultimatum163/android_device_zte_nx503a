@@ -1,8 +1,0 @@
-#============= system_server ==============
-allow system_server sysfs_battery_supply:dir search;
-allow system_server sysfs_battery_supply:file { open read };
-allow system_server persist_file:file open;
-allow system_server persist_file:file read;
-allow system_server proc:file write;
-allow system_server unlabeled:file unlink;
-allow system_server cir_device:chr_file rw_file_perms;

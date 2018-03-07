@@ -1,6 +1,6 @@
 # Camera
-bin/mm-qcamera-daemon
-lib/hw/camera.msm8974.so:lib/hw/camera.vendor.msm8974.so
+vendor/bin/mm-qcamera-daemon
+lib/hw/camera.vendor.msm8974.so
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 lib/libqomx_core.so
@@ -305,8 +305,8 @@ etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
 
 # IRControl
-app/nubia_IRControl/nubia_IRControl.apk
-app/nubia_IRControl_uei_sdk/nubia_IRControl_uei_sdk.apk
+-app/nubia_IRControl/nubia_IRControl.apk
+-app/nubia_IRControl_uei_sdk/nubia_IRControl_uei_sdk.apk
 
 # NFC
 vendor/firmware/libpn544_fw.so
@@ -316,13 +316,16 @@ etc/sensor_def_qcomdev.conf
 vendor/lib/libAKM8963.so
 
 # USB
-bin/usbhub
-bin/usbhub_init
+vendor/bin/usbhub
+vendor/bin/usbhub_init
 
 # WiFi
-etc/firmware/bcm4339/fw_bcmdhd_apsta.bin:etc/firmware/bcm4339/fw_bcmdhd.bin
-etc/firmware/wlan/prima/WCNSS_cfg.dat
 vendor/firmware/bcm4339.hcd
 
 # ZTEMT
-bin/tmg3993
+vendor/bin/tmg3993
+
+# aptX
+vendor/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so
+vendor/lib/libaptXHD-1.0.0-rel-Android21-ARMv7A.so
+vendor/lib/libaptXScheduler.so

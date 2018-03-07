@@ -89,7 +89,7 @@
         <item>40</item>
     </integer-array>
 
-    <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
+    <!-- Vibrator pattern for feedback about booting with safe mode disabled 
     <integer-array name="config_safeModeDisabledVibePattern">
         <item>0</item>
         <item>1</item>
@@ -103,7 +103,7 @@
         <item>21</item>
         <item>500</item>
         <item>600</item>
-    </integer-array>
+    </integer-array> -->
 
     <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
     <integer-array name="config_scrollBarrierVibePattern">
@@ -204,9 +204,6 @@
     <!-- Wifi driver supports batched scan -->
     <bool translatable="false" name="config_wifi_batched_scan_supported">true</bool>
     <bool name="config_wifi_dual_band_support">true</bool>
-
-    <!-- Boolean indicating if current platform supports BLE peripheral mode -->
-    <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
     
     <!-- Flag indicating if the speed up audio on mt call code should be executed -->
     <bool name="config_speed_up_audio_on_mt_calls">true</bool>
@@ -215,8 +212,8 @@
          when there's no network connection. If the scan doesn't timeout, use zero -->
     <integer name="config_radioScanningTimeout">0</integer>
 
-    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">true</bool>
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option 
+    <bool name="config_intrusiveBatteryLed">true</bool> -->
 
     <!-- Make things go fast -->
     <bool name="config_ui_enableFadingMarquee">true</bool>
@@ -256,8 +253,8 @@
             32 - Camera
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">103</integer>
+         config to 7. 
+    <integer name="config_deviceHardwareWakeKeys">103</integer> -->
 
     <!-- Default interface to monitor data use -->
     <string name="config_datause_iface">rmnet0</string>
@@ -340,7 +337,10 @@
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
-    <!-- Support in Surfaceflinger for blur layers. -->		
-    <bool name="config_uiBlurEnabled">true</bool>
+    <!-- Support in Surfaceflinger for blur layers. 		
+    <bool name="config_uiBlurEnabled">true</bool> -->
+
+    <!-- Configuration to support SIM contact batch operation 
+    <bool name="config_sim_phonebook_batch_operation">false</bool> -->
 
 </resources>

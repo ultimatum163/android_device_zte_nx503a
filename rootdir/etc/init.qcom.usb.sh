@@ -96,9 +96,9 @@ esac
 #
 # Add support for exposing lun0 as cdrom in mass-storage
 #
-target=`getprop ro.product.device`
-cdromname="/system/driver.iso"
-echo $cdromname > /sys/class/android_usb/android0/f_mass_storage/lun0/file
+#target=`getprop ro.product.device`
+#cdromname="/system/driver.iso"
+#echo $cdromname > /sys/class/android_usb/android0/f_mass_storage/lun0/file
 
 #
 # Do target specific things

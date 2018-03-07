@@ -1,2 +1,0 @@
-#============= bluetooth ==============
-allow bluetooth proc_bluetooth_writable:file rw_file_perms;

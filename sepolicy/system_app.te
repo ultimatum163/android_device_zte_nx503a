@@ -1,3 +1,0 @@
-#============= system_app ==============
-allow system_app device:chr_file { getattr ioctl };
-allow system_app cir_device:chr_file { getattr ioctl open read write };

@@ -1,2 +1,0 @@
-#============= fsck ==============
-allow fsck self:capability dac_override;

@@ -1,2 +1,0 @@
-#============= irsc_util ==============
-allow irsc_util self:capability dac_override;

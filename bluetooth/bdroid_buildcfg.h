@@ -21,7 +21,13 @@
 #define BTM_DEF_LOCAL_NAME   "Nubia Z5S"
 //#define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 
+/*Car bluetooth fix*/
+#define BTM_WBS_INCLUDED TRUE /* Enable WBS */
+#define BTIF_HF_WBS_PREFERRED FALSE  /* Don't default to WBS */
+
 /* Defined if the kernel does not have support for CLOCK_BOOTTIME_ALARM */
 #define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
+
+#define BTM_BLE_ADV_TX_POWER {-21, -15, -7, 1, 9}
 
 #endif

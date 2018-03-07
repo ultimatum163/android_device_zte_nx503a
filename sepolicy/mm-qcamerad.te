@@ -1,6 +1,0 @@
-#============= mm-qcamerad ==============
-allow mm-qcamerad system_data_file:dir add_name;
-allow mm-qcamerad system_data_file:dir remove_name;
-allow mm-qcamerad system_file:file execmod;
-allow mm-qcamerad system_data_file:dir write;
-

@@ -1,2 +1,0 @@
-#============= wpa ==============
-allow wpa self:capability dac_override;
